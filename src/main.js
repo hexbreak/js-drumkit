@@ -8,6 +8,6 @@ import "./assets/img/4geeks.ico";
 window.addEventListener("keydown", function(e) {
   const audio = document.querySelector(`audio[data-keys="${e.keycode}"]`);
   if (!audio) return; // stop the function from running all together
-
+  audio.currentTime = 0; // rewind to the start
   audio.play();
 });
